@@ -6,6 +6,7 @@ Release:	0.1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.inaccessnetworks.com/projects/asterisk-oh323/download/%{name}-%{version}.tar.gz
+# Source0-md5:	9f51aa8766dd2bd612dc4b28b6316769
 URL:		http://www.inaccessnetworks.com/projects/asterisk-oh323/
 BuildRequires:	asterisk-devel
 BuildRequires:	openh323-devel
