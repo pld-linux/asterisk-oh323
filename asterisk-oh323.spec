@@ -43,16 +43,20 @@ obs³ugiwanego sprzêtu mo¿na znale¼æ pod http://www.asteriskpbx.com/.
 Ten pakiet zawiera wtyczkê H323 dla centralki Asterisk.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
+#wrapper/check_ver /usr/include/pwlib pwlib
+#wrapper/check_ver /usr/include/openh323 openh323
+#echo "#!/bin/sh" > wrapper/check_ver
+
 %{__make} \
 	PWLIBDIR=/usr \
 	OPENH323DIR=/usr \
-#	CFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323" \
-#	CPPFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 \
-#		-DNDEBUG -DP_LINUX -D_REENTRANT -DP_HAS_SEMAPHORES -DP_SSL \
-#		-DP_PTHREADS -DPBYTE_ORDER=PLITTLE_ENDIAN -DPHAS_TEMPLATES"
+	CFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 -I/usr/include/ptlib -I/usr/include" \
+	CPPFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 -I/usr/include/ptlib -I/usr/X11R6/include \
+		-DNDEBUG -DP_LINUX -D_REENTRANT -DP_HAS_SEMAPHORES -DP_SSL \
+		-DP_PTHREADS -DPBYTE_ORDER=PLITTLE_ENDIAN -DPHAS_TEMPLATES"
 
 %install
 rm -rf $RPM_BUILD_ROOT
