@@ -1,11 +1,11 @@
 Summary:	Asterisk PBX - h323 plugin
 Name:		asterisk-oh323
-Version:	0.2
+Version:	0.5.2
 Release:	0.1
 License:	GPL v2
 Group:		Applications/System
-Source0:	ftp://ftp.asterisk.org/pub/telephony/asterisk/h323/%{name}-%{version}.tar.gz
-Patch0:		%{name}-Makefile.patch
+Source0:	http://www.inaccessnetworks.com/projects/asterisk-oh323/download/%{name}-%{version}.tar.gz
+URL:		http://www.inaccessnetworks.com/projects/asterisk-oh323/
 BuildRequires:	asterisk-devel
 BuildRequires:	openh323-devel
 Requires:	asterisk
@@ -25,16 +25,15 @@ current list of supported hardware, see www.asteriskpbx.com.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
 %{__make} \
 	PWLIBDIR=/usr \
 	OPENH323DIR=/usr \
-	CFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323" \
-	CPPFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 \
-		-DNDEBUG -DP_LINUX -D_REENTRANT -DP_HAS_SEMAPHORES -DP_SSL \
-		-DP_PTHREADS -DPBYTE_ORDER=PLITTLE_ENDIAN -DPHAS_TEMPLATES"
+#	CFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323" \
+#	CPPFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 \
+#		-DNDEBUG -DP_LINUX -D_REENTRANT -DP_HAS_SEMAPHORES -DP_SSL \
+#		-DP_PTHREADS -DPBYTE_ORDER=PLITTLE_ENDIAN -DPHAS_TEMPLATES"
 
 %install
 rm -rf $RPM_BUILD_ROOT
