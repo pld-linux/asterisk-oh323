@@ -1,12 +1,12 @@
 Summary:	Asterisk PBX - h323 plugin
 Summary(pl):	Wtyczka h323 dla centralki Asterisk
 Name:		asterisk-oh323
-Version:	0.5.2
+Version:	0.5.4
 Release:	0.1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.inaccessnetworks.com/projects/asterisk-oh323/download/%{name}-%{version}.tar.gz
-# Source0-md5:	9f51aa8766dd2bd612dc4b28b6316769
+# Source0-md5:	67d322ebde318d6f295a6fcafcb57db2
 URL:		http://www.inaccessnetworks.com/projects/asterisk-oh323/
 BuildRequires:	asterisk-devel
 BuildRequires:	openh323-devel
