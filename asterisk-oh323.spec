@@ -1,4 +1,4 @@
-#TODO: %files
+#TODO: %files, fix build
 Summary:	Asterisk PBX - h323 plugin
 Summary(pl):	Wtyczka h323 dla centralki Asterisk
 Name:		asterisk-oh323
@@ -52,8 +52,8 @@ Ten pakiet zawiera wtyczkê H323 dla centralki Asterisk.
 #echo "#!/bin/sh" > wrapper/check_ver
 
 %{__make} \
-	PWLIBDIR=/usr \
-	OPENH323DIR=/usr \
+	PWLIBDIR=/usr/include/pwlib \
+	OPENH323DIR=/usr/include/openh323 \
 	CFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 -I/usr/include/ptlib -I/usr/include" \
 	CPPFLAGS="-Wall %{rpmcflags} -I/usr/include/openh323 -I/usr/include/ptlib -I/usr/X11R6/include \
 		-DNDEBUG -DP_LINUX -D_REENTRANT -DP_HAS_SEMAPHORES -DP_SSL \
