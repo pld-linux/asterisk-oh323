@@ -1,7 +1,7 @@
 # IF asterisk-1.0.6-2 (with h323 enabled by default works)
 # this spec is obsoleted,
 Summary:	Asterisk PBX - h323 plugin
-Summary(pl.UTF-8):   Wtyczka h323 dla centralki Asterisk
+Summary(pl.UTF-8):	Wtyczka h323 dla centralki Asterisk
 Name:		asterisk-oh323
 Version:	0.7.1
 Release:	0.1
