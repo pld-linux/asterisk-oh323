@@ -1,7 +1,7 @@
 # IF asterisk-1.0.6-2 (with h323 enabled by default works)
 # this spec is obsoleted,
 Summary:	Asterisk PBX - h323 plugin
-Summary(pl):	Wtyczka h323 dla centralki Asterisk
+Summary(pl.UTF-8):   Wtyczka h323 dla centralki Asterisk
 Name:		asterisk-oh323
 Version:	0.7.1
 Release:	0.1
@@ -29,20 +29,20 @@ current list of supported hardware, see http://www.asteriskpbx.com/.
 
 This package contains H323 plugin for Asterisk PBX.
 
-%description -l pl
-Asterisk to wolnodostêpna centralka (PBX) i platforma programistyczna
-dla telefonii, mog±ca zast±piæ konwencjonalne PBX-y oraz s³u¿yæ jako
-platforma do rozwijania w³asnych aplikacji telefonicznych do
-przekazywania dynamicznej tre¶ci przez telefon, podobnie jak mo¿na
-przekazywaæ dynamiczn± tre¶æ przez przegl±darkê WWW przy u¿yciu CGI i
+%description -l pl.UTF-8
+Asterisk to wolnodostÄ™pna centralka (PBX) i platforma programistyczna
+dla telefonii, mogÄ…ca zastÄ…piÄ‡ konwencjonalne PBX-y oraz sÅ‚uÅ¼yÄ‡ jako
+platforma do rozwijania wÅ‚asnych aplikacji telefonicznych do
+przekazywania dynamicznej treÅ›ci przez telefon, podobnie jak moÅ¼na
+przekazywaÄ‡ dynamicznÄ… treÅ›Ä‡ przez przeglÄ…darkÄ™ WWW przy uÅ¼yciu CGI i
 serwera WWW.
 
-Asterisk wspó³pracuje z wielorakim sprzêtem telefonicznym, w tym BRI,
-PRI, POTS oraz klienty telefonii IP u¿ywaj±ce protoko³u Inter-Asterisk
-eXchange (np. gnophone lub miniphone). Wiêcej informacji i listê
-obs³ugiwanego sprzêtu mo¿na znale¼æ pod http://www.asteriskpbx.com/.
+Asterisk wspÃ³Å‚pracuje z wielorakim sprzÄ™tem telefonicznym, w tym BRI,
+PRI, POTS oraz klienty telefonii IP uÅ¼ywajÄ…ce protokoÅ‚u Inter-Asterisk
+eXchange (np. gnophone lub miniphone). WiÄ™cej informacji i listÄ™
+obsÅ‚ugiwanego sprzÄ™tu moÅ¼na znaleÅºÄ‡ pod http://www.asteriskpbx.com/.
 
-Ten pakiet zawiera wtyczkê H323 dla centralki Asterisk.
+Ten pakiet zawiera wtyczkÄ™ H323 dla centralki Asterisk.
 
 %prep
 %setup -q
